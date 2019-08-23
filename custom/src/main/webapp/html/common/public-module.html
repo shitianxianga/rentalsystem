@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>公共模板</title>
+    <link rel="stylesheet"type="text/css" href="../../css/common/bootstrap.min.css">
+    <link rel="stylesheet"type="text/css" href="../../css/common/bootstrap-theme.min.css">
+
+    <link rel="stylesheet"type="text/css" href="../../css/common/reset.css">
+    <link rel="stylesheet"type="text/css" href="../../css/common/common.css">
+    <link rel="stylesheet"type="text/css" href="../../css/xxx.css">
+    <script type="text/javascript" src="../../js/common/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    <!--头部-->
+    <div class="header-box"></div>
+    <script>
+        $(".header-box").load("../common/public-header.html");
+    </script>
+
+    <!--尾部-->
+    <div class="footer-box"></div>
+    <script>
+        $(".footer-box").load("../common/public-footer.html");
+    </script>
+
+    <!-- 用户中心头部 -->
+    <div class="top-box"></div>
+    <script>
+        $(".top-box").load("../common/userTopNav.html");
+    </script>
+
+    <!-- 左边导航 -->
+    <div class="left-box"></div>
+    <script>
+        $(".left-box").load("../common/userLeftNav.html");
+    </script>
+</body>
+</html>

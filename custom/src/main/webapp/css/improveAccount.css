@@ -1,0 +1,126 @@
+.main-content {
+    background: #f2f3f5;
+    overflow: hidden;
+}
+
+.right-content {
+    width: 922px;
+    background: #fff;
+    margin: 20px 10px 20px 10px;
+    padding: 25px;
+}
+
+.right-content .content-title {
+    font-size: 18px;
+    color: #60606c;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.right-content .content-input-box {
+    font-size: 14px;
+    color: #60606c;
+    padding: 20px;
+    border-top: 1px solid #e9ebee;
+}
+
+.right-content .content-input-box .content-text {
+    display: inline-block;
+    width: 200px;
+}
+
+.right-content .content-input-box .content-input {
+    width: 300px;
+    height: 38px;
+    border: 1px solid #e9ebee;
+    outline: none;
+    color: #60606c;
+    font-size: 14px;
+    padding-left: 10px;
+}
+
+.right-content .content-input-box .content-error {
+    width: 250px;
+    margin-left: 10px;
+    display: inline-block;
+    color: #ff0000;
+}
+
+.right-content .content-input-box .content-span {
+    display: inline-block;
+    width: 300px;
+    color: #60606c;
+    font-size: 14px;
+}
+
+.right-content .content-input-box .content-link {
+    color: #6ab0ff;
+    margin-left: 10px;
+}
+
+/*弹出框*/
+.dialog-content {
+    width: 480px;
+    padding: 30px;
+}
+.dialog-content .dialog-input {
+    width: 300px;
+    height: 38px;
+    border: 1px solid #e9ebee;
+    outline: none;
+    color: #60606c;
+    font-size: 14px;
+    padding-left: 10px;
+}
+
+.dialog-content .dialog-span {
+    font-size: 14px;
+    color: #60606c;
+    display: inline-block;
+    width: 100px;
+}
+
+.dialog-content .dialog-btn {
+    width: 100px;
+    height: 30px;
+    font-size: 15px;
+    font-weight: bold;
+    background: #fabe00;
+    color: #fff;
+    border: 0;
+    border-radius: 3%;
+    margin-top: 10px;
+    margin-left: 100px;
+}
+
+.dialog-content .dialog-btn:hover {
+    background: #FF8650;
+}
+
+.dialog-content .dialog-error {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    display: inline-block;
+    margin-left: 100px;
+}
+
+.dialog-content .vCode-input {
+    width: 200px;
+    height: 38px;
+    border: 1px solid #e9ebee;
+    outline: none;
+    color: #60606c;
+    font-size: 14px;
+    padding-left: 10px;
+}
+
+.dialog-content .vCode-btn {
+    width: 90px;
+    height: 38px;
+    color: #fff;
+    font-size: 14px;
+    border: 0;
+    border-radius: 2%;
+    margin-left: 10px;
+    background: #6ab0ff;
+}

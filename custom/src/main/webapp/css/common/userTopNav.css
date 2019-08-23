@@ -1,0 +1,127 @@
+.my-cargo {
+    background: #fff;
+    height: 100px;
+    overflow: hidden;
+}
+
+.my-cargo-logo-content {
+    height: 100px;
+    border-right: 1px solid #e5e5e5;
+    padding: 25px 70px 0 30px;
+}
+
+.my-cargo-logo-content .my-cargo-logo {
+    width: 170px;
+    height: 35px;
+    margin-bottom: 5px;
+}
+
+.my-cargo-logo-content .weacher-content {
+    padding-left: 20px;
+    color: #60606C;
+    font-size: 14px;
+}
+
+.user-img-box {
+    height: 100px;
+    padding-top: 10px;
+    margin-left: 20px;
+}
+
+.my-cargo .user-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.my-cargo .user-desc {
+    width: 170px;
+    height: 100px;
+    padding-top: 25px;
+    margin-left: 15px;
+    font-size: 14px;
+    color: #60606c;
+    border-right: 1px solid #e5e5e5;
+}
+
+.my-cargo  .renter-text {
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    border: 1px solid #FF8650;
+    margin-top: 10px;
+    color: #FF8650;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+}
+
+.my-cargo  .owner-text {
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    border: 1px solid #2b99ff;
+    margin-top: 10px;
+    color: #2b99ff;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+}
+
+.my-cargo .date-content {
+    width: 250px;
+    height: 100px;
+    padding-top: 15px;
+    margin-left: 25px;
+    font-size: 14px;
+    color: #60606c;
+    border-right: 1px solid #e5e5e5;
+}
+
+.my-cargo .month {
+    width: 70px;
+    height: 30px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background: #FF8650;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.my-cargo .current-time {
+    margin-left: 20px;
+    margin-top: 25px;
+}
+
+.my-cargo .day {
+    width: 70px;
+    height: 45px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background: #e6e4e2;
+    text-align: center;
+    line-height: 45px;
+    color: #000;
+    font-weight: bold;
+}
+
+.my-cargo .regist-time-content {
+    width: 300px;
+    height: 100px;
+    line-height: 100px;
+    margin-left: 15px;
+    font-size: 14px;
+    color: #60606c;
+}
+
+.my-cargo .regist-time-content .regist-time-png {
+    width: 70px;
+    height: 70px;
+}
+
+.my-cargo .regist-time-content .regist-time {
+    display: inline-block;
+    margin-left: 20px;
+}

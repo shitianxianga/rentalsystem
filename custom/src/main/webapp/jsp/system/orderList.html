@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>车辆列表</title>
+
+    <link rel="stylesheet" type="text/css" href="../../css/common/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/common/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="../../css/themes/default/easyui.css" type="text/css">
+    <link rel="stylesheet" href="../../css/themes/icon.css" type="text/css">
+    <link rel="stylesheet" href="../../css/system/userList.css" type="text/css">
+    <link rel="stylesheet" href="../../css/system/carList.css" type="text/css">
+
+    <link rel="stylesheet"type="text/css" href="../../css/common/reset.css">
+    <link rel="stylesheet"type="text/css" href="../../css/common/common.css">
+
+    <script type="text/javascript" src="../../js/common/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../../js/layer/layer.js"></script>
+    <script type="text/javascript" src="../../js/common/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="../../js/common/easyui-loading.js"></script>
+
+    <style>
+    </style>
+</head>
+<body>
+<table class="easyui-datagrid dg" width="100%" height="100%"
+       toolbar=".toolbar" rownumbers="true" fitColumns="false" singleSelect="true">
+    <thead>
+    <tr>
+        <th field="id" width="60">订单编号</th>
+        <th field="brand" width="60">品牌</th>
+        <th field="model" width="60">车型</th>
+        <th field="configuration" width="150">配置</th>
+        <th field="seats" width="50">座位数</th>
+        <th field="doors" width="40">门数</th>
+        <th field="displacement" width="40">排量</th>
+        <th field="navigator" width="50">导航仪</th>
+        <th field="pdc" width="60">倒车雷达</th>
+        <th field="drivenMode" width="60">驱动模式</th>
+        <th field="fuelTankage" width="40">油箱</th>
+        <th field="gearbox" width="50">变速箱</th>
+        <th field="skylight" width="40">天窗</th>
+        <th field="aircell" width="60">安全气囊</th>
+        <th field="operate" width="200">操作</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>1</td>
+        <td>法拉利</td>
+        <td>488</td>
+        <td>高配版</td>
+        <td>2</td>
+        <td>2</td>
+        <td>10L</td>
+        <td>有</td>
+        <td>有</td>
+        <td>四驱</td>
+        <td>50</td>
+        <td>自动挡</td>
+        <td>有</td>
+        <td>4</td>
+        <td>
+            <a href="javascript:void(0)" onclick="showImg();" class="easyui-linkbutton" iconCls="icon-search" plain="true">图片</a>
+            <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-ok" plain="true">启用</a>
+            <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-no" plain="true">停用</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<div class="toolbar" style="padding: 20px; position: relative;">
+    <a href="#" id="passBtn" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="addCar()">添加</a>
+    <a href="#" id="failBtn" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="editCar()">修改</a><br/><br/>
+
+    <img src="../../images/system/brand.png"> <input class="username" placeholder="品牌查询">&nbsp;&nbsp;
+    <img src="../../images/system/model.png"> <input class="username" placeholder="车型查询">&nbsp;&nbsp;
+    <img src="../../images/system/configuration.png"> <input class="username" placeholder="配置查询">
+    <input type="submit" value="查询" style="background:#0089dc; color: #fff; border: 0; border-radius: 3%;">
+</div>
+
+<div class="easyui-dialog dlg" style="width:500px;height:260px;padding:10px 20px;"
+     closed="true" buttons="#dlg-buttons" pagination="true">
+</div>
+
+<script>
+    function addCar() {
+        openEdit("添加汽车");
+    }
+
+    function editCar() {
+        var row = $(".dg").datagrid("getSelected");
+        if (row) {
+            openEdit("修改汽车");
+            $(".info-content").form("load", row);
+            $(".id").val(row.id);
+        }
+    }
+
+    function openEdit(title) {
+        layer.open({
+            title: title,
+            type: 1,
+            closeBtn: 1,  // 调试用
+            area: ['600px', '400px'], //宽高
+            content:
+                '<form action="#" method="post" class="info-content">' +
+                '<input type="hidden" class="id" name="id">' +
+                '<table>' +
+                '<tr>' +
+                '<td>品牌</td>' +
+                '<td><select name="brand">' +
+                '<option value="0">请选择</option>' +
+                '<option>法拉利</option>' +
+                '<option>马自达</option>' +
+                '<option>本田</option>' +
+                '</select></td>' +
+                '</tr>' +
+                '<tr>' +
+                '<td>车型</td>' +
+                '<td><select name="model">' +
+                '<option value="0">请选择</option>' +
+                '<option>86</option>' +
+                '<option>488</option>' +
+                '<option>卡罗拉</option>' +
+                '</select></td>' +
+                '</tr>' +
+                '<tr>' +
+                '<td>配置</td>' +
+                '<td><select name="configuration">' +
+                '<option value="0">请选择</option>' +
+                '<option>高配版2017</option>' +
+                '<option>高配版</option>' +
+                '<option>低配版2017</option>' +
+                '</select></td>' +
+                '</tr>' +
+                '<tr>' +
+                '<td>座位数</td>' +
+                '<td><input name="seats" type="number" placeholder="输入座位数"></td>' +
+                '</tr>' +
+                '<tr>' +
+                '<td>车门数</td>' +
+                '<td><input name="doors" type="number" placeholder="输入车门数"></td>' +
+                '</tr>' +
+                '<tr>' +
+                '<td>排量</td>' +
+                '<td><input name="displacement" placeholder="输入排量"></td>' +
+                '</tr>' +
+                '<tr>' +
+                '<td>导航仪</td>' +
+                '<td><input id="has-nav" name="navigator" value="有" type="radio"><label for="has-nav">有</label>' +
+                '<input id="no-nav" name="navigator" value="无" type="radio"><label for="no-nav">无</label></td>' +
+                '</tr>' +
+                '<tr>' +
+                '<td>倒车雷达</td>' +
+                '<td><input id="has-pdc" name="pdc" value="有" type="radio"><label for="has-pdc">有</label>' +
+                '<input id="no-pdc" name="pdc" value="无" type="radio"><label for="no-pdc">无</label></td>' +
+                '</tr>' +
+                '<tr>' +
+                '<td>驱动模式</td>' +
+                '<td><select name="drivenMode">' +
+                '<option value="0">请选择</option>' +
+                '<option value="前驱">前驱</option>' +
+                '<option value="后驱">后驱</option>' +
+                '<option value="四驱">四驱</option>' +
+                '</select></td>' +
+                '</tr>' +
+                '<tr>' +
+                '<td>油箱</td>' +
+                '<td><input name="fuelTankage" type="number" placeholder="输入油箱大小"></td>' +
+                '</tr>' +
+                '<tr>' +
+                '<td>变速箱</td>' +
+                '<td><select name="gearbox">' +
+                '<option value="0">请选择</option>' +
+                '<option value="自动挡">自动挡</option>' +
+                '<option value="手动挡">手动挡</option>' +
+                '</select></td>' +
+                '</tr>' +
+                '<tr>' +
+                '<td>天窗</td>' +
+                '<td><input id="has-sky" name="skylight" value="有" type="radio"><label for="has-sky">有</label>' +
+                '<input id="no-sky" name="skylight" value="无" type="radio"><label for="no-sky">无</label></td>' +
+                '</tr>' +
+                '<tr>' +
+                '<td>安全气囊</td>' +
+                '<td><input name="aircell" type="number" placeholder="输入安全气囊数量"></td>' +
+                '</tr>' +
+                '<tr>' +
+                '<td></td>' +
+                '<td><input type="submit" value="提交"></td>' +
+                '</tr>' +
+                '</table>' +
+                '</form>'
+        });
+    }
+    /**
+     * 查看图片
+     */
+    function showImg() {
+        var row = $(".dg").datagrid("getSelected");
+        if (row) {
+            layer.open({
+                title: '车辆图片',
+                type: 1,
+                closeBtn: 1,  // 调试用
+                area: ['600px', '400px'], //宽高
+                content:
+                    '<div class="info-content">' +
+                    '<div class="content-text"><em>图片：</em></div>' +
+                    '<a href="../../images/system/488-1.jpg" class="img-big-link" target="_blank"><img class="content-img img-big" src="../../images/system/488-1.jpg"></a>' +
+                    '<div class="clearfloat">' +
+                    '<a href="javascript:void(0)" onclick="changeImg(this);" class="content-img-small-link left-float"><img class="content-img-small" src="../../images/system/488-1.jpg"></a>' +
+                    '<a href="javascript:void(0)" onclick="changeImg(this);" class="content-img-small-link left-float"><img class="content-img-small" src="../../images/system/488-2.jpg"></a>' +
+                    '<a href="javascript:void(0)" onclick="changeImg(this);" class="content-img-small-link left-float"><img class="content-img-small" src="../../images/system/488-3.jpg"></a>' +
+                    '<a href="javascript:void(0)" onclick="changeImg(this);" class="content-img-small-link left-float"><img class="content-img-small" src="../../images/system/488-4.jpg"></a>' +
+                    '</div>' +
+                    '</div>'
+            });
+        }
+    }
+
+    /**
+     * 轮播改变图片
+     * @param link 图片链接
+     */
+    function changeImg(link) {
+        var img = $(link).find("img").get(0);
+        $(".content-img-small").css("border", "0");
+        $(img).css("border", "1px solid #c0c0c0");
+
+        $(".img-big").attr("src", $(img).attr("src"));
+        $(".img-big-link").attr("href", $(img).attr("src"));
+    }
+</script>
+</body>
+</html>

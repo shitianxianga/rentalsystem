@@ -1,0 +1,63 @@
+.main-content {
+    height: 560px;
+    overflow: hidden;
+    background-image: url("../../images/bg.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.registBox {
+    width: 450px;
+    min-height: 420px;
+    margin: 0 auto;
+    margin-top: 120px;
+}
+.heading {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #fabe00;
+}
+.password, .vCode, .registBtn {
+    width: 350px;
+    height: 40px;
+    margin: 0 auto;
+    display: block;
+}
+.phone {
+    width: 350px;
+    height: 40px;
+    margin-left: 65px;
+    display: inline-block;
+}
+.vCodeBtn {
+    width: 100px;
+    height: 38px;
+    display: inline-block;
+}
+.phoneError, .passwordError, .vCodeError, .registError {
+    display: block;
+    margin-left: 70px;
+    color: #ff0000;
+    font-size: 15px;
+}
+.registBtn, .registBtn:hover, .registBtn:visited, .registBtn:active {
+    /* background: #4cd96f; */
+    background: #fabe00;
+    background: #F9CA34;
+    border: 0;
+    color: #fff;
+    border-radius: 5px;
+}
+.loginLink {
+    display: block;
+    margin-top: 10px;
+    color: #0000FF;
+    float: left;
+    margin-left: 65px;
+}
+a:hover {
+    text-decoration: none;
+    color: #0000FF;
+}

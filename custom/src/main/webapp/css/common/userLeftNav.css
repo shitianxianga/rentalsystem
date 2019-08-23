@@ -1,0 +1,29 @@
+/*左边导航*/
+.left-nav {
+    width: 268px;
+    background: #fff;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.left-nav .nav-title {
+    font-size: 14px;
+    color: #60606c;
+    font-weight: normal;
+    padding: 10px;
+    border-top: 1px solid #e9ebee;
+    border-bottom: 1px solid #e9ebee;
+}
+.left-nav .nav-text {
+    width: 268px;
+    font-size: 12px;
+    color: #93939e;
+    padding: 10px 10px 10px 20px;
+}
+.left-nav .nav-text:hover {
+    color: #fabe00;
+    background-color: #fff8e8;
+}
+.left-nav .active {
+    color: #fabe00;
+    background-color: #fff8e8;
+}

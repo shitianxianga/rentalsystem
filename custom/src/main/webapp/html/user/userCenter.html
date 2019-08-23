@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的Cargo</title>
+    <link rel="stylesheet"type="text/css" href="../../css/common/bootstrap.min.css">
+    <link rel="stylesheet"type="text/css" href="../../css/common/bootstrap-theme.min.css">
+
+    <link rel="stylesheet"type="text/css" href="../../css/common/reset.css">
+    <link rel="stylesheet"type="text/css" href="../../css/common/common.css">
+    <link rel="stylesheet"type="text/css" href="../../css/common/userLeftNav.css">
+    <link rel="stylesheet"type="text/css" href="../../css/userRightContent.css">
+    <link rel="stylesheet"type="text/css" href="../../css/common/userTopNav.css">
+    <script type="text/javascript" src="../../js/common/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../../js/common/userLeftNav.js"></script>
+    <script type="text/javascript" src="../../js/userCenter.js"></script>
+</head>
+<body>
+    <div class="public-header">
+        <div class="public-container clearfloat">
+            <div class="header-logo left-float"><a href="#"><img src="../../images/logo.png"></a></div>
+            <ul class="header-nav clearfloat">
+                <!--导航栏-->
+                <li class="item left-float"><a class="nav-link first-link" href="#">首页</a></li>
+                <li class="item left-float"><a class="nav-link" href="#">租车</a></li>
+                <li class="item left-float"><a class="nav-link" href="#">租私家车</a></li>
+                <li class="item left-float"><a class="nav-link" href="#">我有车辆</a></li>
+                <li class="item left-float"><a class="nav-link" href="#">以租代购</a></li>
+                <li class="item left-float"><a class="nav-link" href="#">门店</a></li>
+
+                <!--未登录-->
+                <!--<li class="item right-float">
+                    <a class="nav-link regist-link" href="#">注册</a><span class="slash-text">/</span><a class="nav-link login-link" href="#">登录</a>
+                </li>-->
+
+                <!--已登录-->
+                <li class="item right-float"><a class="nav-link mycargo-link" href="#">我的Cargo</a></li>
+                <li class="item right-float"><span class="hello-text">您好，陈***</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="public-container clearfloat">
+            <!-- 左边导航 -->
+            <div class="left-nav left-float">
+                <dl>
+                    <dt class="nav-title">我的订单</dt>
+                    <a href="javascript:void(0)" onclick="changeNav(this);"><dd class="nav-text active">租车</dd></a>
+                    <a href="javascript:void(0)" onclick="changeNav(this);"><dd class="nav-text">出租</dd></a>
+                    <dt class="nav-title">我的车辆</dt>
+                    <dt class="nav-title">我的账户</dt>
+                    <a href="javascript:void(0)" onclick="changeNav(this);"><dd class="nav-text">登录信息完善</dd></a>
+                    <a href="javascript:void(0)" onclick="changeNav(this);"><dd class="nav-text">身份认证</dd></a>
+                    <a href="javascript:void(0)" onclick="changeNav(this);"><dd class="nav-text">修改密码</dd></a>
+                    <dt class="nav-title">我的消息</dt>
+                </dl>
+            </div>
+            <!-- 右边内容 -->
+            <div class="right-content left-float">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="public-footer">
+        <div class="public-container">
+            <div class="copyright-text">Copyright©2008-2018 www.cargo.com All Rights Reserved. Cargo汽车租赁有限公司 粤ICP备10005002号 粤公网安备号 11010502026705</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+body{
+    font: 12px/1.5 Arial,"Microsoft yahei",Helvetica,Verdana,SimHei,sans-serif;
+}
+
+.tableth{
+    background: #aac5e7;
+    font-size: 20px;
+    margin: 10px;
+}
+.tabletr{
+padding: 10px;
+    border-bottom:1px solid #000;
+}
+.img{
+    width: 180px;
+    height: 100px;
+}
+.decs{
+    font-size: 13px;
+    color: #93939e;
+    margin-top: 5px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.status{
+    font-size: 18px;
+}
+.price{
+    font-size: 25px;
+    color: #fabe00;
+    font-weight: bold;
+}

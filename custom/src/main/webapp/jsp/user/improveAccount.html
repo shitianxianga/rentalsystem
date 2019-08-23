@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>完善账户</title>
+    <link rel="stylesheet"type="text/css" href="../../css/common/bootstrap.min.css">
+    <link rel="stylesheet"type="text/css" href="../../css/common/bootstrap-theme.min.css">
+
+    <link rel="stylesheet"type="text/css" href="../../css/common/reset.css">
+    <link rel="stylesheet"type="text/css" href="../../css/common/common.css">
+    <link rel="stylesheet"type="text/css" href="../../css/improveAccount.css">
+
+    <script type="text/javascript" src="../../js/common/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../../js/layer/layer.js"></script>
+    <script type="text/javascript" src="../../js/user/improveAccount.js"></script>
+</head>
+<body>
+    <!--头部-->
+    <div class="header-box"></div>
+    <script>
+        $(".header-box").load("../common/public-header.html");
+    </script>
+
+    <!-- 用户中心头部 -->
+    <div class="top-box"></div>
+    <script>
+        $(".top-box").load("../common/userTopNav.html");
+    </script>
+
+
+    <div class="main-content">
+        <div class="public-container clearfloat">
+            <!-- 左边导航 -->
+            <div class="left-box"></div>
+            <script>
+                $(".left-box").load("../common/userLeftNav.html");
+            </script>
+
+            <!-- 右边内容 -->
+            <div class="right-content left-float">
+                <dl>
+                    <table>
+                        <dt class="content-title">账户信息 </dt>
+                        <dd class="content-input-box">
+                            <span class="content-text">用户名</span><!--
+                             --><input class="content-input" placeholder="请输入用户名"><!--
+                             --><span class="content-error">用户名格式错误</span><!--
+                             --><a class="content-link" href="javascript:void(0)" onclick="openEditUsername();">修改</a>
+                            <!--<a class="content-link" href="#">保存</a>-->
+                        </dd>
+                        <dd class="content-input-box">
+                            <span class="content-text">电话</span><!--
+                            --><span class="content-span">13432825705</span><!--
+                            --><span class="content-error">联系电话格式错误</span><!--
+                            --><a class="content-link" href="javascript:void(0)" onclick="openEditPhone();">修改</a>
+                        </dd>
+                        <dd class="content-input-box">
+                            <span class="content-text">邮箱</span><!--
+                            --><input class="content-input" placeholder="请输入邮箱号"><!--
+                            --><span class="content-error">邮箱格式错误</span><!--
+                            --><a class="content-link" href="javascript:void(0)" onclick="openEditEmail();">修改</a>
+                        </dd>
+                        <dd class="content-input-box">
+                            <span class="content-text">密码</span><!--
+                            --><span class="content-span">******</span><!--
+                            --><span class="content-error"></span><!--
+                            --><a class="content-link" href="javascript:void(0)" onclick="openEditPassword();">修改</a>
+                        </dd>
+                    </table>
+                </dl>
+            </div>
+        </div>
+    </div>
+
+    <!--尾部-->
+    <div class="footer-box"></div>
+    <script>
+        $(".footer-box").load("../common/public-footer.html");
+    </script>
+</body>
+</html>

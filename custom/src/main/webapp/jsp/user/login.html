@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录页面</title>
+    <link rel="stylesheet" href="../../css/common/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet"type="text/css" href="../../css/common/bootstrap-theme.min.css">
+
+    <link rel="stylesheet"type="text/css" href="../../css/common/reset.css">
+    <link rel="stylesheet"type="text/css" href="../../css/common/common.css">
+    <link rel="stylesheet" href="../../css/user/login.css" type="text/css">
+
+    <script type="text/javascript" src="../../js/common/jquery-3.2.1.min.js"></script>
+</head>
+
+<body>
+<!--头部-->
+<div class="header-box"></div>
+<script>
+    $(".header-box").load("../common/public-header.html");
+</script>
+<div class="main-content">
+    <div class="bg-img"></div>
+    <div class="transparent"></div>
+    <div class="loginBox">
+        <form action="${pageContext.request.contextPath }/user/login" class="form-horizontal" onsubmit="return validate();" method="post">
+            <div class="heading">用户登录</div>
+            <div class="form-group">
+                <input type="text" class="form-control username" name="username" placeholder="用户名/手机号/邮箱" maxlength="50">
+                <span class="usernameError">用户名错了，错了</span>
+            </div>
+
+            <div class="form-group help">
+                <input type="password" class="form-control password" name="password" placeholder="密码" maxlength="20">
+                <span class="passwordError"></span>
+                <span class="loginError">密码错了，错了</span>
+            </div>
+            <div class="form-group">
+                <input type="submit" class="loginBtn" id="login" value="登录" />
+                <a id="register" class="registLink" href="<%=basePath%>user/toRegist"><span>还没账号？</span>快速注册</a>
+                <a class="forgetLink" id="forgetPwd" href="<%=basePath%>user/toForgetPassword">忘记密码?</a>
+            </div>
+        </form>
+    </div>
+</div>
+<!--尾部-->
+<div class="footer-box"></div>
+<script>
+    $(".footer-box").load("../common/public-footer.html");
+</script>
+<script type="text/javascript">
+    // 登录前台校验
+    function validate() {
+        var username = $(".username").val();
+        var password = $(".password").val();
+        // 用户名和密码非空校验
+        if (username == "") {
+            $(".usernameError").text("用户名为空");
+            return false;
+        } else {
+            $(".usernameError").text("");
+        }
+        if (password == "") {
+            $(".passwordError").text("密码为空");
+            return false;
+        } else {
+            $(".passwordError").text("");
+        }
+
+        // 判断用户输入内容是：用户名/手机号还是邮箱
+        if (!isNaN(username)) {
+            $(".username").attr("name", "phone"); // 手机号
+        }
+        else if (username.indexOf("@") != -1) {
+            $(".username").attr("name", "email"); // 邮箱
+        }
+        else {
+            $(".username").attr("name", "username"); // 用户名
+        }
+        return true;
+    }
+</script>
+</body>
+</html>

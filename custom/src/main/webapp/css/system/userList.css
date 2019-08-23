@@ -1,0 +1,23 @@
+/*认证信息*/
+.info-content {
+    width: 600px;
+    height: 400px;
+    padding: 20px;
+}
+.info-content .content-text {
+    font-size: 16px;
+    margin-top: 10px;
+}
+.info-content .content-img {
+    width: 400px;
+    height: 200px;
+}
+/*小图*/
+.info-content .content-img-small-link {
+    display: block;
+    margin: 10px 10px 10px 0;
+}
+.info-content .content-img-small {
+    width: 70px;
+    height: 30px;
+}

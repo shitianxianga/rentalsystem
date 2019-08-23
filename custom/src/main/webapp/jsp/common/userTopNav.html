@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人中心头部</title>
+    <link rel="stylesheet"type="text/css" href="../../css/common/bootstrap.min.css">
+    <link rel="stylesheet"type="text/css" href="../../css/common/bootstrap-theme.min.css">
+
+    <link rel="stylesheet"type="text/css" href="../../css/common/reset.css">
+    <link rel="stylesheet"type="text/css" href="../../css/common/common.css">
+    <link rel="stylesheet"type="text/css" href="../../css/common/userTopNav.css">
+    <link rel="stylesheet"type="text/css" href="../../css/improveAccount.css">
+
+    <script type="text/javascript" src="../../js/common/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../../js/common/userTopNav.js"></script>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<script>
+    var date=new Date();
+    $(".month").text(date.getMonth());
+    $(".day").text(date.getDate());
+    // 获取城市
+    var cityUrl = 'http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js';
+    $.getScript(
+        cityUrl,
+        function() {
+            var city = remote_ip_info.city; // 获取城市
+
+            // 获取天气预报
+            $.ajax({
+                url: "http://api.map.baidu.com/telematics/v3/weather?location=" + city + "&output=json&ak=EGgzZ22dsboWQEcPQ6KDQLknQd3YkkkP",
+                type: "get",
+                dataType: "jsonp",
+                scriptCharset: "gbk",
+                success: function(baiduTQ) {
+                    try {
+                        if (baiduTQ == null || baiduTQ.error != 0 || baiduTQ.status != "success" || baiduTQ.results.count == 0) {
+                            document.getElementById("city").innerHTML = "--";
+                            document.getElementById("weather").innerHTML = "--";
+                            document.getElementById("temp").innerHTML = "--";
+                            return;
+                        }
+                        if (baiduTQ.results[0].weather_data.length > 0) {
+                            var data = baiduTQ.results[0].weather_data[0];
+                            var split = data.date.split("：");
+                            document.getElementById("city").innerHTML = city + "[" + data.temperature + "]";
+                            document.getElementById("weather").innerHTML = data.weather;
+                            var curTemp = split.pop();
+                            document.getElementById("temp").innerHTML = curTemp.substring(0, curTemp.length - 1);
+
+
+                        }
+                    } catch (err) {
+                        alert(err)
+                    }
+                }
+            });
+        });
+
+
+
+</script>
+<head>
+    <meta charset="UTF-8">
+    <title>个人中心头部</title>
+    <link rel="stylesheet"type="text/css" href="../../css/common/bootstrap.min.css">
+    <link rel="stylesheet"type="text/css" href="../../css/common/bootstrap-theme.min.css">
+
+    <link rel="stylesheet"type="text/css" href="../../css/common/reset.css">
+    <link rel="stylesheet"type="text/css" href="../../css/common/common.css">
+    <link rel="stylesheet"type="text/css" href="../../css/common/userTopNav.css">
+    <link rel="stylesheet"type="text/css" href="../../css/improveAccount.css">
+
+    <script type="text/javascript" src="../../js/common/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../../js/common/userTopNav.js"></script>
+</head>
+<body>
+<div class="my-cargo">
+    <div class="public-container clearfloat">
+        <div class="my-cargo-logo-content left-float">
+            <img class="my-cargo-logo" src="../../images/my-cargo-logo.png"><br/>
+            <div class="weacher-content">
+                <span class="address-text" id="city">武汉</span>
+                <span class="weather-text" id="weather">晴</span>
+                <span class="temp-text" id="temp">6°</span>
+            </div>
+        </div>
+        <div class="user-img-box left-float">
+            <img class="user-img" src="../../images/choice-3.png">
+        </div>
+        <div class="user-desc left-float">
+            <div class="user-name">134328**05</div>
+            <div class="owner-text">车主</div>
+            <div class="renter-text">租友</div>
+        </div>
+        <div class="date-content left-float clearfloat">
+            <div class="calender left-float">
+                <div class="month">1月</div>
+                <div class="day">1日</div>
+            </div>
+            <div class="current-time left-float">00:00:00</div>
+        </div>
+        <div class="regist-time-content left-float">
+            <img class="regist-time-png" src="../../images/regist-time.png"><!--
+                    --><div class="regist-time">2015/12/01 14:00:00加入</div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

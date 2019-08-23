@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://code.alibabatech.com/schema/dubbo
+http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <!-- 有了上面的三个dubbo的url地址，这里才可以使用dubbo标签 -->
+
+    <!-- 该标签必须保证每个项目的名称不同，用来服务治理用的，就是应用（项目）的名称 -->
+    <dubbo:application name="demo-consumer" owner="zgy" organization="dubbo_zgy"/>
+
+    <!-- 配置zookeeper注册中心 -->
+    <dubbo:registry address="zookeeper://134.175.197.73:2181" protocol="zookeeper" />
+
+    <!-- 配置redis注册中心 -->
+    <!-- <dubbo:registry address="redis://192.168.149.129:6379" /> -->
+    <!-- 关闭所有服务的自动检查 -->
+    <!-- <dubbo:consumer check="false"/> -->
+
+    <!-- 配置服务消费者，引用远程服务，本标记相当于创建了一个bean，所以在类中可以通过注解自动注入 -->
+    <dubbo:reference id="systemService" interface="cn.yd.carrentalsystem.service.SystemService" timeout="400099" />
+    <dubbo:reference id="kindService" interface="cn.yd.carrentalsystem.service.KindService"  timeout="400099"/>
+    <dubbo:reference id="userService" interface="cn.yd.carrentalsystem.service.UserService"  timeout="400099"/>
+    <dubbo:reference id="custService" interface="cn.yd.carrentalsystem.service.CustService"  timeout="400099"/>
+    <dubbo:reference id="leaseService" interface="cn.yd.carrentalsystem.service.LeaseService"  timeout="400099"/>
+    <dubbo:reference id="carService" interface="cn.yd.carrentalsystem.service.CarService"  timeout="400099"/>
+</beans>

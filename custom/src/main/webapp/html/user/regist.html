@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册页面</title>
+    <link rel="stylesheet" href="../../css/common/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet"type="text/css" href="../../css/common/bootstrap-theme.min.css">
+
+    <link rel="stylesheet"type="text/css" href="../../css/common/reset.css">
+    <link rel="stylesheet"type="text/css" href="../../css/common/common.css">
+    <link rel="stylesheet" href="../../css/user/regist.css" type="text/css">
+
+    <script type="text/javascript" src="../../js/common/jquery-3.2.1.min.js"></script>
+</head>
+
+<body>
+<!--头部-->
+<div class="header-box"></div>
+<script>
+    $(".header-box").load("../common/public-header.html");
+</script>
+<div class="main-content">
+    <div class="registBox">
+        <form action="${pageContext.request.contextPath }/user/regist" class="form-horizontal" method="post">
+            <div class="heading">用户注册</div>
+            <div>
+                <div class="form-group">
+                    <input type="text" class="form-control phone" name="phone" oninput="judgePhone();" placeholder="手机号" maxlength="11"><!--
+                     --><button class="btn btn-info vCodeBtn" type="button" disabled="disabled" onclick="sendVCode();">发送验证码</button>
+                    <span class="phoneError">验证码错误</span>
+                </div>
+
+                <div class="form-group help">
+                    <input class="form-control vCode" name="vCode" placeholder="验证码" maxlength="6">
+                    <span class="vCodeError"></span>
+                    <span class="registError">验证码错误</span>
+                </div>
+            </div>
+
+            <div class="form-group help">
+                <input type="password" class="form-control password" readonly="readonly" oninput="judgePassword();" name="password" placeholder="3-12位的密码" maxlength="12">
+                <span class="passwordError">验证码错误</span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" class="registBtn" disabled="disabled" value="注册" />
+                <a class="loginLink" href="<%=basePath%>user/toLogin"><span>已有账号？前往</span>登录</a>
+            </div>
+        </form>
+    </div>
+</div>
+<!--尾部-->
+<div class="footer-box"></div>
+<script>
+    $(".footer-box").load("../common/public-footer.html");
+</script>
+<script type="text/javascript">
+</script>
+</body>
+</html>

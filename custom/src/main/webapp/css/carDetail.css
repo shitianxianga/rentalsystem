@@ -1,0 +1,143 @@
+.main-content {
+    background: #f2f3f5;
+    overflow: hidden;
+}
+
+.main-content .car-desc-box {
+    width: 650px;
+    background: #fff;
+    margin: 20px 10px 20px 130px;
+    padding: 20px 20px 20px 20px;
+}
+
+.main-content .car-desc-box .car-title {
+    font-size: 24px;
+    font-weight: bold;
+    /*border-bottom: 1px solid #61A1DF;*/
+}
+
+/*图片和缩略图*/
+.main-content .car-desc-box .car-img-box {
+    width: 600px;
+    margin: 0 auto;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+.main-content .car-desc-box .car-img-big {
+    width: 560px;
+    height: 300px;
+    margin-left: 20px;
+    border: 1px solid #E9EBEE;
+}
+
+.main-content .car-desc-box .car-img-small-box {
+    width: 600px;
+    padding: 20px;
+}
+
+.main-content .car-desc-box .car-img-small {
+    width: 60px;
+    height: 40px;
+    border: 1px solid #E9EBEE;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+/*汽车基本信息*/
+.main-content .car-desc-box .car-base-info-box {
+}
+
+.main-content .car-desc-box .base-info-title {
+    font-size: 18px;
+    border-bottom: 1px solid #61A1DF;
+}
+
+.main-content .car-desc-box .base-info-content {
+    font-size: 14px;
+}
+
+.main-content .car-desc-box .base-info-content-box {
+    width: 600px;
+    margin: 20px 0 20px 0;
+}
+
+.main-content .car-desc-box .base-info-content-box td {
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+/*预定按钮*/
+.main-content .order-btn-box {
+    width: 600px;
+    height: 40px;
+    margin: 0 auto;
+    position: relative;
+}
+.main-content .order-btn-box .order-btn {
+    width: 100px;
+    height: 30px;
+    font-size: 15px;
+    font-weight: bold;
+    background: #fabe00;
+    color: #fff;
+    border: 0;
+    border-radius: 3%;
+    position: absolute;
+    left: 50%;
+    margin-left: -50px;
+}
+
+.main-content .order-btn-box .order-btn:hover {
+    background: #FF8650;
+}
+
+/*店铺信息*/
+.main-content  .car-store {
+    width: 270px;
+    background: #fff;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.main-content  .car-store .store-name {
+    color: #60606C;
+    font-size: 14px;
+    margin: 25px 0 10px 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.main-content .car-store .store-map {
+    height: 200px;
+    background: #b8bac1;
+}
+
+.main-content .car-store .store-desc{
+    padding: 20px 10px 20px 10px;
+}
+
+.main-content .car-store .store-title {
+    color: #60606c;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.main-content .car-store .store-content {
+    color: #93939e;
+    font-size: 13px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.main-content .car-store .comment-star img {
+    margin-right: -8px;
+    margin-top: -5px;
+}
+
+.main-content .car-store .total-comment {
+    color: #93939e;
+    font-size: 13px;
+}

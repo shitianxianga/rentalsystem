@@ -1,0 +1,335 @@
+.address-date-choice {
+    height: 128px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+/*地址选择*/
+.address-date-choice .choice-address {
+    padding-top: 12px;
+    overflow: hidden;
+}
+
+.address-date-choice .choice-address .choice-address-block {
+    margin-top: 10px;
+}
+
+.address-date-choice .choice-address .address-text, .address-date-choice .choice-date .date-text {
+    font-size: 14px;
+    color: #60606c;
+}
+
+.address-date-choice .choice-address .address-choice {
+    color: #60606c;
+    width: 250px;
+    height: 36px;
+    border: 1px solid #e4e6e9;
+    margin-left: 20px;
+    padding-left: 10px;
+    outline: none;
+}
+
+.address-date-choice .choice-address .switch-text {
+    font-size: 14px;
+    color: #60606c;
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.car-to-img {
+    margin-top: 25px;
+    margin-left: 45px;
+    text-align: center;
+}
+
+/*时间选择*/
+.address-date-choice .choice-date {
+    margin-left: 45px;
+    padding-top: 12px;
+    overflow: hidden;
+}
+
+.address-date-choice .choice-date .choice-date-block {
+    margin-top: 10px;
+}
+
+.address-date-choice .choice-date .date-choice {
+    color: #60606c;
+    width: 210px;
+    height: 36px;
+    border: 1px solid #e4e6e9;
+    margin-left: 20px;
+    padding-left: 10px;
+    outline: none;
+}
+
+.address-date-choice .date-to-img {
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.address-date-choice .choice-submit {
+    padding-top: 12px;
+    padding-left: 30px;
+    overflow: hidden;
+}
+
+.address-date-choice .choice-submit .rent-time {
+    margin-top: 14px;
+    text-align: center;
+    color: #939a9f;
+    font-size: 14px;
+}
+
+.address-date-choice  .choice-submit .choice-btn {
+    width: 200px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: bold;
+    background: #fabe00;
+    color: #fff;
+    border: 0;
+    border-radius: 2%;
+    margin-top: 10px;
+}
+
+.address-date-choice .choice-submit  .choice-btn:hover {
+    background: #FF8650;
+}
+
+/* 中间部分 */
+.car-select {
+    background: #f2f3f5;
+    overflow: hidden;
+}
+
+/* 中间左边 */
+.car-select .car-filter {
+    width: 270px;
+
+    margin-top: 20px;
+    margin-right: 10px;
+    background: #fff;
+}
+
+.car-select .car-filter .car-price {
+    width: 270px;
+    height: 100px;
+    background: #fff;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.car-select .car-filter .car-price .price-title {
+    color: #60606C;
+    font-size: 14px;
+    margin: 25px 0 10px 10px;
+}
+
+.car-select .car-filter .car-price .price-line {
+    overflow: hidden;
+}
+
+.car-select .car-filter .car-price .price-line-common  {
+    display: inline-block;
+    width: 44px;
+    border-bottom: 5px solid #E9EBEE;
+    margin-right: 2px;
+}
+
+.car-select .car-filter .car-price .price-line-1 {
+    border-bottom: 5px solid #fabe00;
+    margin-left: 10px;
+}
+.car-select .car-filter .car-price .price-line-5 {
+    width: 65px;
+}
+
+.car-select .car-filter .car-price .price-text {
+    color: #93939E;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.car-select .car-filter .car-brand {
+    width: 270px;
+    background: #fff;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    overflow: hidden;
+}
+
+.car-select .car-filter .car-brand .brand-title {
+    color: #60606C;
+    font-size: 14px;
+    margin: 25px 0 10px 10px;
+}
+
+.car-select .car-filter .car-brand .brand-content {
+    margin-left: 10px;
+}
+
+.car-select .car-filter .car-brand .brand-name-common {
+    color: #93939e;
+    font-size: 14px;
+    display: inline-block;
+    overflow: hidden;
+    width: 65px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.car-select .car-filter .car-brand .brand-name-specify {
+    color: #fabe00;
+}
+
+.car-select .car-filter .car-store {
+    width: 270px;
+    background: #fff;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.car-select .car-filter .car-store .store-name {
+    color: #60606C;
+    font-size: 14px;
+    margin: 25px 0 10px 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.car-select .car-filter .car-store .store-map {
+    height: 200px;
+    background: #b8bac1;
+}
+
+.car-select .car-filter .car-store .store-desc{
+    padding: 20px 10px 20px 10px;
+}
+
+.car-select .car-filter .car-store .store-title {
+    color: #60606c;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.car-select .car-filter .car-store .store-content {
+    color: #93939e;
+    font-size: 13px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.car-select .car-filter .car-store .comment-star img {
+    margin-right: -8px;
+    margin-top: -5px;
+}
+
+.car-select .car-filter .car-store .total-comment {
+    color: #93939e;
+    font-size: 13px;
+}
+
+.car-select .car-content {
+    width: 920px;
+    background: #fff;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.car-select .car-content .single-car {
+    height: 180px;
+    border-bottom: 1px solid #E9EBEE;
+    padding: 20px 10px 20px 30px;
+}
+
+.car-select .car-content .single-car .car-img {
+    width: 230px;
+    height: 130px;
+}
+
+.car-select .car-content .single-car .car-desc-box {
+    width: 230px;
+    height: 130px;
+    padding: 25px 10px 20px 20px;
+}
+
+.car-select .car-content .single-car .car-name {
+    font-size: 16px;
+    color: #60606c;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+.car-select .car-content .single-car .car-desc {
+    font-size: 13px;
+    color: #93939e;
+    margin-top: 5px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.car-select .car-content .single-car .car-gear {
+    width: 50px;
+    height: 20px;
+    border: 1px solid #FF8650;
+    margin-top: 10px;
+    color: #FF8650;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+}
+
+.car-select .car-content .single-car .car-gear-auto {
+    width: 50px;
+    height: 20px;
+    border: 1px solid #2b99ff;
+    margin-top: 10px;
+    color: #2b99ff;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+}
+
+.car-select .car-content .single-car .car-price-box {
+    width: 230px;
+    height: 130px;
+}
+
+.car-select .car-content .single-car .car-price-text {
+    font-size: 30px;
+    color: #fabe00;
+    font-weight: bold;
+}
+
+.car-select .car-content .single-car .day-avg {
+    font-size: 13px;
+    color: #93939e;
+    line-height: 130px;
+}
+
+.car-select .car-content .single-car .choice-btn-box {
+    width: 100px;
+    height: 130px;
+}
+
+.car-select .car-content .single-car .choice-btn {
+    width: 90px;
+    height: 50px;
+    font-size: 15px;
+    font-weight: bold;
+    background: #fabe00;
+    color: #fff;
+    border: 0;
+    border-radius: 3%;
+    margin-top: 40px;
+}
+
+.car-select .car-content .single-car .choice-btn:hover {
+    background: #FF8650;
+}
+.title-a{
+    color:#60606c;
+}

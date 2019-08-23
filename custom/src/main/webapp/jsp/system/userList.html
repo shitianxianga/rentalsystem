@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户列表</title>
+
+    <link rel="stylesheet" type="text/css" href="../../css/common/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/common/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="../../css/themes/default/easyui.css" type="text/css">
+    <link rel="stylesheet" href="../../css/themes/icon.css" type="text/css">
+    <link rel="stylesheet" href="../../css/system/userList.css" type="text/css">
+
+    <link rel="stylesheet"type="text/css" href="../../css/common/reset.css">
+    <link rel="stylesheet"type="text/css" href="../../css/common/common.css">
+
+    <script type="text/javascript" src="../../js/common/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../../js/layer/layer.js"></script>
+    <script type="text/javascript" src="../../js/common/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="../../js/common/easyui-loading.js"></script>
+
+    <style>
+    </style>
+</head>
+<body>
+    <table class="easyui-datagrid dg" width="100%" height="100%"
+           toolbar=".toolbar" rownumbers="true" fitColumns="false" singleSelect="true">
+        <thead>
+            <tr>
+                <th field="id" width="150">用户编号</th>
+                <th field="photo" width="70">用户头像</th>
+                <th field="phone" width="150">联系电话</th>
+                <th field="username" width="150">用户名</th>
+                <th field="email" width="150">邮箱</th>
+                <th field="status" width="150">账户状态</th>
+                <th field="operate" width="200">操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><a href="../../images/choice-1.png" target="_blank"><img src="../../images/choice-1.png" style="width: 30px; height: 30px;"></a></td>
+                <td>13432825705</td>
+                <td>cblstc</td>
+                <td>13432825705@163.com</td>
+                <td>已启用</td>
+                <td>
+                    <a href="javascript:void(0)" onclick="showInfo();" class="easyui-linkbutton" iconCls="icon-search" plain="true">认证信息</a>
+                    <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-ok" plain="true">启用</a>
+                    <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-no" plain="true">停用</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="toolbar" style="padding: 20px; position: relative;">
+        <img src="../../images/system/username.png"> <input class="username" placeholder="用户名查询">&nbsp;&nbsp;
+        <img src="../../images/system/phone.png"> <input class="username" placeholder="联系电话查询">&nbsp;&nbsp;
+        <img src="../../images/system/email.png"> <input class="username" placeholder="邮箱查询">&nbsp;&nbsp;
+        <input type="submit" value="查询" style="background:#0089dc; color: #fff; border: 0; border-radius: 3%;">
+    </div>
+
+    <div class="easyui-dialog dlg" style="width:500px;height:260px;padding:10px 20px;"
+         closed="true" buttons="#dlg-buttons" pagination="true">
+    </div>
+
+    <script>
+    /**
+     * 查看认证信息
+      */
+    function showInfo() {
+        var row = $(".dg").datagrid("getSelected");
+        if (row) {
+            layer.open({
+                title: '认证信息',
+                type: 1,
+                closeBtn: 1,  // 调试用
+                area: ['600px', '400px'], //宽高
+                content: '<div class="info-content">' +
+                    '<div class="content-text"><em>姓名：</em>陈龙</div>' +
+                    '<div class="content-text"><em>性别：</em>男</div>' +
+                    '<div class="content-text"><em>身份证正面：</em></div>' +
+                    '<a href="../../images/system/idcard_sample.jpg" target="_blank"><img class="content-img" src="../../images/system/idcard_sample.jpg"></a>' +
+                    '<div class="content-text"><em>驾驶证正面：</em></div>' +
+                    '<a href="../../images/system/driver-sample.png" target="_blank"><img class="content-img" src="../../images/system/driver-sample.png"></a>' +
+                    '<div class="content-text"><em>驾驶证副页：</em></div>' +
+                    '<a href="../../images/system/vice-sample.png" target="_blank"><img class="content-img" src="../../images/system/vice-sample.png"></a>' +
+                    '</div>'
+            });
+        }
+    }
+    </script>
+</body>
+</html>

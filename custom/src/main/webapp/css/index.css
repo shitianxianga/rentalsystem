@@ -1,0 +1,227 @@
+.index-carousel {
+    position: relative;
+}
+
+.index-carousel .index-carousel-bg {
+    height: 500px;
+    background-image: url("../images/pic2.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.hotbox{
+    position: absolute;
+    left: 150px;
+}
+.hotTiltle
+{
+    font-size: 40px;
+}
+.hotfont{
+    color: #93939e;
+}
+.hotcar{
+
+    font-size: 16px;
+    padding: 20px;
+    margin: 10px;
+    background: #F8F8F8;
+    height: 240px;
+    width: 400px;
+
+}
+.hotimg{
+    width: 360px;
+    height: 145px;
+}
+.index-carousel .index-choice {
+    position: absolute;
+    top: 50%;
+    left: 80px;
+    margin-top: -188px;
+    width: 518px;
+    height: 376px;
+    background: #fff;
+    box-shadow: 1px 0px 0px 1px #f0f1f3;
+}
+
+.index-choice .choice-nav {
+    height: 50px;
+}
+
+.index-choice .choice-nav .nav-common {
+    width: 172px;
+    height: 50px;
+    background: #f0f1f3;
+    border-left: 1px solid #e4e6e9;
+    border-bottom: 1px solid #e4e6e9;
+}
+
+.index-choice .choice-nav .nav-common:hover {
+    cursor: pointer;
+}
+
+.index-choice .choice-nav .nav-text {
+    color: #60606c;
+    text-align: center;
+    line-height: 50px;
+}
+
+.index-choice .choice-nav .nav-random {
+    background: #fff;
+    border: 0;
+}
+
+.index-choice .choice-address .choice-address-block {
+    margin-left: 50px;
+    margin-top: 35px;
+}
+
+.index-choice .choice-address .address-text, .index-choice .choice-date .date-text {
+    font-size: 14px;
+    color: #60606c;
+}
+
+.index-choice .choice-address .address-choice {
+    color: #60606c;
+    width: 360px;
+    height: 36px;
+    border: 1px solid #e4e6e9;
+    margin-left: 20px;
+    padding-left: 10px;
+    outline: none;
+}
+
+.index-choice .choice-date {
+    margin-left: 50px;
+    margin-top: 35px;
+}
+
+.index-choice .choice-date .date-choice {
+    color: #60606c;
+    width: 128px;
+    height: 36px;
+    border: 1px solid #e4e6e9;
+    margin-left: 20px;
+    padding-left: 10px;
+    outline: none;
+}
+
+.index-choice .choice-date .return-date-choice {
+    margin-left: 0;
+}
+
+.index-choice .choice-btn {
+    width: 400px;
+    height: 45px;
+    font-size: 15px;
+    font-weight: bold;
+    background: #fabe00;
+    color: #fff;
+    border: 0;
+    border-radius: 2%;
+    margin-top: 30px;
+    margin-left: 50px;
+}
+
+.index-choice .choice-btn:hover {
+    background: #FF8650;
+}
+
+.index-tab .index-tab-box {
+    height: 100px;
+    border: 0;
+    border-spacing: 0;
+}
+
+.index-tab .index-tab-common {
+    width: 303px;
+    height: 100px;
+    border-left: 1px solid #E9EBEE;
+    overflow: hidden;
+}
+
+.index-tab .index-tab-infinite {
+    border-right: 1px solid #E9EBEE;
+}
+
+.index-tab .tab-img-common {
+    display: block;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+
+.index-content {
+    background: #f2f3f5;
+}
+
+.index-content .index-content-box {
+    height: 512px;
+}
+
+.index-content .choice-common {
+    display: inline-block;
+    margin-top: 75px;
+    margin-right: 23px;
+    width: 286px;
+    height: 360px;
+    background: #fff;
+    position: relative;
+}
+
+.index-content .choice-final {
+    margin-right: 0;
+}
+
+.index-content .choice-title {
+    font-size: 22px;
+    color: #000;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.index-content .choice-img-common {
+    width: 127px;
+    height: 127px;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+
+.index-content .choice-img-1 {
+    background-image: url("../images/choice-1.png");
+}
+.index-content .choice-img-2 {
+    background-image: url("../images/choice-2.png");
+}
+.index-content .choice-img-3 {
+    background-image: url("../images/choice-3.png");
+}
+.index-content .choice-img-4 {
+    background-image: url("../images/choice-4.png");
+}
+
+.index-content .choice-desc {
+    font-size: 14px;
+    color: #939a9f;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.index-content .choice-btn {
+    width: 164px;
+    height: 40px;
+    background: #fff;
+    border: 1px solid #e4e6e9;
+    border-radius: 2%;
+    display: block;
+    font-size: 16px;
+    color: #60606c;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+
+.index-content .choice-btn:hover {
+    color: #fff;
+    background: #fabe00;
+    border: 0;
+    border-radius: 2%;
+}

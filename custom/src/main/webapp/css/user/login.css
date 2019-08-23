@@ -1,0 +1,58 @@
+.main-content {
+    height: 560px;
+    overflow: hidden;
+    background-image: url("../../images/bg.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.loginBox {
+    width: 450px;
+    min-height: 420px;
+    margin: 0 auto;
+    margin-top: 130px;
+}
+.heading {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #fabe00;
+}
+.username, .password, .loginBtn {
+    width: 350px;
+    height: 40px;
+    margin: 0 auto;
+    display: block;
+}
+.usernameError, .passwordError, .loginError {
+    display: block;
+    margin-left: 70px;
+    color: #ff0000;
+    font-size: 15px;
+}
+.loginBtn, .loginBtn:hover, .loginBtn:visited, .loginBtn:active {
+    background: #fabe00;
+    border: 0;
+    color: white;
+    border-radius: 5px;
+}
+.loginBtn:hover {
+    background: #FF8650;
+}
+.registLink, .forgetLink {
+    display: block;
+    margin-top: 10px;
+    color: #0000ff;
+}
+a:hover {
+    text-decoration: none;
+    color: #0000ff;
+}
+.registLink {
+    float: left;
+    margin-left: 65px;
+}
+.forgetLink {
+    float: right;
+    margin-right: 65px;
+}
