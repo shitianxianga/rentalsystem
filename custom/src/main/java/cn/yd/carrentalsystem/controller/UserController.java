@@ -159,9 +159,22 @@ public  String toMenu()
        User user= (User) request.getSession().getAttribute("user");
         newPassword = DigestUtils.md5Hex(newPassword);
        userService.changePwd(user,newPassword);
-        return  "redirect:/order/findAllOrderList";
+        return  "redirect:/order/findOrderList/0";
     }
-
+    @RequestMapping("/user/testPwd/{oldPassword}")
+    @ResponseBody
+public String testPwd(@PathVariable("oldPassword") String oldPassword,HttpServletRequest request)
+{
+    User user= (User) request.getSession().getAttribute("user");
+    if (DigestUtils.md5Hex(oldPassword).equals(user.getPassword()))
+    {
+        return  "{\"isSame\":"+true+"}";
+    }
+    else
+    {
+        return  "{\"isSame\":"+false+"}";
+    }
+}
     /**
      * 完善信息
      * @param request

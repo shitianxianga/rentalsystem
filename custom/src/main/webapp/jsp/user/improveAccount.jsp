@@ -25,6 +25,25 @@
 
 </script>
 <script>
+    function testPwdExit() {
+        $.ajax(
+            {
+                url:"${pageContext.request.contextPath}/user/testPwd/"+$("[name='oldPassword']").val(),
+                method: "Post",
+                dataType:"json",
+                success:function (data) {
+                    if (data.isSame==true)
+                    {
+                        $(".passwordError").text("");
+                    }
+                    else{
+                        $(".passwordError").text("原密码不正确");
+                    }
+                }
+            }
+        )
+
+    }
     function testpwd() {
         var pwd=$("[name='newPassword']").val();
         var pwd1=$("[name='newPassword1']").val();
@@ -33,12 +52,6 @@
         {
             $(".passwordError").text("密码必须大于等于6位");
             return false;
-        }
-
-        if (oldpwd!=$("[name='old']").text())
-        {
-            $(".passwordError").text("原密码错误，请重新输入");
-            return  false;
         }
         if (pwd==pwd1)
         {
@@ -94,7 +107,7 @@
                     <span hidden name="old">${user.password}</span>
                     <dd class="content-input-box">
                         <span class="content-text">旧密码</span>
-                        <input   name="oldPassword" type="password" class="content-input" placeholder="请输入原密码"><br><br>
+                        <input   name="oldPassword" type="password" onchange="testPwdExit()" class="content-input" placeholder="请输入原密码"><br><br>
                         <span class="content-text">新密码</span>
                         <input   name="newPassword" type="password" class="content-input" placeholder="请输入新密码"><br><br>
                         <span class="content-text">再次输入</span>

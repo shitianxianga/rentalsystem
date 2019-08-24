@@ -84,11 +84,11 @@ pageEncoding="UTF-8"%>
                 </div>
                 <div class="form-group">
                     <label>取车详细地址(不填默认网点取车)</label>
-                    <input class="form-control" readonly type="text" value="${leaseCustom.createaddress}"/>
+                    <input class="form-control" readonly type="text" value="${leaseCustom.receiveaddress}"/>
                 </div>
                 <div class="form-group">
                     <label>还车详细地址(不填默认网点还车)</label>
-                    <input class="form-control" readonly type="text" value="${leaseCustom.receivetaddress}"/>
+                    <input class="form-control" readonly type="text" value="${leaseCustom.returnaddress}"/>
                 </div>
                 <div class="form-group">
                     <label>取车时间</label>
@@ -161,7 +161,7 @@ pageEncoding="UTF-8"%>
 
     <div class="footer-box"></div>
     <script>
-        $(".footer-box").load("../common/public-footer.html");
+        $(".footer-box").load("${pageContext.request.contextPath}/jsp/common/public-footer.jsp");
     </script>
 </body>
 </html>
